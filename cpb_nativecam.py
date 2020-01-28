@@ -51,7 +51,7 @@ if len(ds) > 0 :
 		fe.parm('nodepath').set(i.path())
 		fe.parm('path').set('aperture focal')
 		ge = ch.createNode("object", ("get_cam_xf_" + str(c)))
-		ge.parm('referencepath').set(i.path())
+		ge.parm('targetpath').set(i.path())
 		ge.parm('compute').set(8)
 		mg = ch.createNode("merge", ("merge_channels_" + str(c)))
 		mg.setNextInput(ge)
